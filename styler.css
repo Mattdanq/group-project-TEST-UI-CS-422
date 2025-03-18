@@ -1,7 +1,6 @@
 html, body {
     background-color: #c8cfdb;
     overflow-x: hidden;
-    overflow-y: hidden;
     margin:0;
     padding: 0;
     height:100%;
@@ -48,6 +47,7 @@ specifies the box that the login page is holding
     flex-direction: row;
     height: 100%;
     width: 100%;
+    margin-top: 5px;
 }
 
 .calender-block, .task-block {
@@ -58,15 +58,17 @@ specifies the box that the login page is holding
     padding: 10px;
     width:60%;
     height:fit-content;
-    margin-right: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .task-block {
     flex-direction: column;
     padding:10px;
     padding-bottom: 0px;
+    margin-right: 5px;
     height: fit-content;
-    width: 100%;
+    width: 40%;
 }
 
 .task-block p {
@@ -86,7 +88,6 @@ default for this type of matters*/
 @media (max-width: 800px) {
 
     html, body {
-        overflow-y: auto;
         min-width: 800px;
     }
 
@@ -95,6 +96,7 @@ default for this type of matters*/
 
     .main-grid{
         flex-direction: column;
+        display: flex;
     }
 
     .task-block, .calender-block {
