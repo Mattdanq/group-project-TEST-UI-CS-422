@@ -1,5 +1,10 @@
-body {
+html, body {
     background-color: #c8cfdb;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin:0;
+    padding: 0;
+    height:100%;
 }
 
 /*
@@ -23,11 +28,85 @@ specifies the box that the login page is holding
     font-weight: bold;
 }
 
+/*tasks css*/
+.topbar {
+    background-color: blue;
+    flex-direction: row;
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.topbar p {
+    color:white;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.main-grid{
+    display:flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+}
+
+.calender-block, .task-block {
+    background-color: white;
+}
+
+.calender-block {
+    padding: 10px;
+    width:60%;
+    height:fit-content;
+    margin-right: 10px;
+}
+
+.task-block {
+    flex-direction: column;
+    padding:10px;
+    padding-bottom: 0px;
+    height: fit-content;
+    width: 100%;
+}
+
+.task-block p {
+    background-color: #e1e8f5;
+    padding: 10px;
+    margin-left: -7px;
+    margin-right: -7px;
+    margin-top: -10px;
+    margin-bottom: 13px;
+    font-size: 20px;
+    font-weight: bold;
+    color:gray;
+}
+
 /* for when its time for mobile screen sizes, pulled 800px from the slides as the given 
 default for this type of matters*/
 @media (max-width: 800px) {
 
+    html, body {
+        overflow-y: auto;
+        min-width: 800px;
+    }
+
     .login_box {
     }
 
+    .main-grid{
+        flex-direction: column;
+    }
+
+    .task-block, .calender-block {
+        width: 96%;
+        margin-left: 5px;
+    }
+
+    .task-block {
+        height: fit-content;
+    }
+
+    .calender-block {
+        margin-bottom: 10px;
+    }
 }
